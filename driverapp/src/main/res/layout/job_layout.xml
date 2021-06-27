@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="#F3F1F1"
+    android:clickable="true">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="16dp"
+        android:text="Job by"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/testPick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:autoLink="phone"
+        android:text="Pickup"
+        android:textAllCaps="true"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autoLink="phone"
+        android:lineSpacingExtra="16sp"
+        android:text="details"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textDest"
+        app:layout_constraintTop_toBottomOf="@+id/textDest" />
+
+    <TextView
+        android:id="@+id/textDest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autoLink="phone"
+        android:text="Destination"
+        android:textAllCaps="true"
+        app:layout_constraintStart_toStartOf="@+id/testPick"
+        app:layout_constraintTop_toBottomOf="@+id/testPick" />
+
+    <Button
+        android:id="@+id/buttonA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#689F38"
+        android:text="Accept"
+        android:textColor="#FAFAFA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

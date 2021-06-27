@@ -33,6 +33,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.mapbox.android.core.permissions.PermissionsListener;
 import com.mapbox.android.core.permissions.PermissionsManager;
 import com.mapbox.mapboxsdk.Mapbox;
@@ -124,6 +125,7 @@ public class MainPage extends AppCompatActivity implements PermissionsListener {
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
                     case R.id.menu_logout:
+                        FirebaseAuth.getInstance().signOut();
                         Intent intent1 = new Intent(getApplicationContext(), Activity3.class);
                         startActivity(intent1);
                         Toast.makeText(getApplicationContext(), "Logout ", Toast.LENGTH_LONG).show();

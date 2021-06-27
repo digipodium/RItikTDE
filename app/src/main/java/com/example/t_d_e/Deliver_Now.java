@@ -123,7 +123,6 @@ public class Deliver_Now extends AppCompatActivity {
             user.put("Package Weight", Package_Weight);
             user.put("Delivery Price", price);
             user.put("Delivery Vehicle", veh);
-            user.put("dp", null);
             user.put("statue", "active");
             user.put("mylatitude", mylatitude);
             user.put("mylongitude", mylongitude);
@@ -131,6 +130,10 @@ public class Deliver_Now extends AppCompatActivity {
             user.put("destlongitude", destlongitude);
             user.put("destaddr", destaddr);
             user.put("myaddr", Pickup);
+            user.put("dp", null);
+            user.put("duid", null);
+            user.put("dphonenumber", null);
+            user.put("payment_complete", false);
 
 // Add a new document with a generated ID
             db.collection("delivery")

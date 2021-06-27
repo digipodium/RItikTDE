@@ -7,11 +7,11 @@
     android:background="@color/white"
     android:id="@+id/drawer"
     tools:openDrawer="start"
-    tools:context=".MainPage">
+    tools:context=".MainScreen">
 
 
-
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
@@ -20,22 +20,42 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/design_default_color_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:title="TDE PARTNER"
             app:titleTextColor="@color/white" />
+
         <com.mapbox.mapboxsdk.maps.MapView
             android:id="@+id/mapView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="60dp" >
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/jobRecycler"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
         </com.mapbox.mapboxsdk.maps.MapView>
-    </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/jobRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mapView"
+            tools:listitem="@layout/job_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navmenu"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/navmenu"
-        app:menu="@menu/iconmenu"
+        android:layout_gravity="start"
         app:headerLayout="@layout/nav_header"
-        android:layout_gravity="start">
-    </com.google.android.material.navigation.NavigationView>
+        app:menu="@menu/iconmenu"
+        tools:visibility="gone"></com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>

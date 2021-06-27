@@ -25,7 +25,7 @@
         <activity android:name=".MarkArrived" />
         <activity android:name=".request" />
         <activity android:name=".DriverId" />
-        <activity android:name=".MainScreen" />
+        <activity android:name=".MainScreen" android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity android:name=".Register" />
         <activity android:name=".otp_verfication" />
         <activity android:name=".phoneverification" />

@@ -5,26 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".completeTask">
+
     <com.mapbox.mapboxsdk.maps.MapView
         android:id="@+id/mapView"
-        android:layout_width="406dp"
-        android:layout_height="457dp"
-        android:layout_marginEnd="5dp"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </com.mapbox.mapboxsdk.maps.MapView>
+
     <Button
         android:id="@+id/completeTask"
         android:layout_width="167dp"
         android:layout_height="47dp"
-        android:layout_marginStart="228dp"
         android:layout_marginTop="13dp"
         android:layout_marginEnd="16dp"
         android:text="COMPLETE TASK"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mapView" />
 
     <TextView
@@ -38,14 +37,14 @@
         android:textSize="14dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/recieverName"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="529dp" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView17"
+        app:layout_constraintTop_toTopOf="@+id/recieverName" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="143dp"
         android:layout_height="36dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="17dp"
         android:gravity="center"
@@ -73,16 +72,16 @@
         android:id="@+id/recieverAdd"
         android:layout_width="220dp"
         android:layout_height="37dp"
+        android:layout_marginTop="19dp"
         android:layout_marginEnd="23dp"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="588dp" />
+        app:layout_constraintTop_toBottomOf="@+id/recieverName" />
 
     <TextView
         android:id="@+id/textView20"
         android:layout_width="138dp"
         android:layout_height="36dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="18dp"
         android:gravity="center"
@@ -91,17 +90,18 @@
         android:textSize="14dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/recieverPhone"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView17"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <TextView
         android:id="@+id/recieverPhone"
         android:layout_width="215dp"
         android:layout_height="32dp"
+        android:layout_marginTop="22dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="52dp"
         android:gravity="center"
         android:inputType="phone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recieverAdd" />
 </androidx.constraintlayout.widget.ConstraintLayout>

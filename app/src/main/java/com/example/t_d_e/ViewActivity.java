@@ -1,5 +1,6 @@
 package com.example.t_d_e;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -54,11 +55,13 @@ public class ViewActivity extends AppCompatActivity {
         private final LayoutInflater inflater;
         private final int job_layout;
         private final List<Object> objectList;
+        private final Context context;
 
         public JobAdapter(Context context, int job_layout, List<Object> objectList) {
             inflater = LayoutInflater.from(context);
             this.job_layout = job_layout;
             this.objectList = objectList;
+            this.context = context;
         }
 
         @NonNull
@@ -113,7 +116,27 @@ public class ViewActivity extends AppCompatActivity {
                 details = v.findViewById(R.id.details);
                 v.setOnClickListener(view -> {
                     DocumentSnapshot o = (DocumentSnapshot) objectList.get(getAdapterPosition());
-                    Toast.makeText(ViewActivity.this, o.getDouble("Delivery Price")+"", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ViewActivity.this, o.getDouble("Delivery Price") + "", Toast.LENGTH_SHORT).show();
+                    String dphonenumber = o.getString("dphonenumber");
+                    if(dphonenumber!=null) {
+                        new AlertDialog.Builder(context)
+                                .setTitle("call delivery person")
+                                .setMessage("call " + dphonenumber + "\n" + "Status " + o.getString("statue"))
+                                .setPositiveButton("ok", (dialogInterface, i) -> {
+
+                                })
+                                .create()
+                                .show();
+                    }else{
+                        new AlertDialog.Builder(context)
+                                .setTitle("No one accepted job")
+                                .setMessage("job not picked up yet!")
+                                .setPositiveButton("ok", (dialogInterface, i) -> {
+
+                                })
+                                .create()
+                                .show();
+                    }
                 });
             }
         }
