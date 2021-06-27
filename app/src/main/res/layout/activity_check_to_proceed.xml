@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Check_to_proceed">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+    <ImageView
+        android:id="@+id/imageBike"
+        android:layout_width="0dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="154dp"
+        android:onClick="useBike"
+        app:layout_constraintBottom_toTopOf="@+id/priceBike"
+        app:layout_constraintEnd_toStartOf="@+id/imageminiXl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bike" />
+
+    <ImageView
+        android:id="@+id/imageRikshaw"
+        android:layout_width="0dp"
+        android:layout_height="86dp"
+        android:layout_marginEnd="38dp"
+        android:onClick="useRick"
+        app:layout_constraintBottom_toTopOf="@+id/priceRick"
+        app:layout_constraintEnd_toStartOf="@+id/imageminiXl"
+        app:layout_constraintStart_toEndOf="@+id/priceBike"
+        app:srcCompat="@drawable/threewheeler" />
+
+    <ImageView
+        android:id="@+id/imageminiXl"
+        android:layout_width="0dp"
+        android:layout_height="86dp"
+        android:layout_marginEnd="40dp"
+        android:onClick="useMini"
+        app:layout_constraintBottom_toTopOf="@+id/priceMni"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageBike"
+        app:srcCompat="@drawable/fourwheeler" />
+
+    <TextView
+        android:id="@+id/priceBike"
+        android:layout_width="0dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginEnd="45dp"
+        android:text="BIKE"
+        app:layout_constraintBottom_toBottomOf="@+id/priceRick"
+        app:layout_constraintEnd_toEndOf="@+id/imageBike"
+        app:layout_constraintEnd_toStartOf="@+id/imageRikshaw"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/priceRick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="RIKSHAW"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageRikshaw"
+        app:layout_constraintStart_toStartOf="@+id/imageRikshaw" />
+
+    <TextView
+        android:id="@+id/priceMni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MINI XL"
+        app:layout_constraintBottom_toBottomOf="@+id/priceRick"
+        app:layout_constraintEnd_toEndOf="@+id/imageminiXl"
+        app:layout_constraintStart_toStartOf="@+id/imageminiXl" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toTopOf="@+id/textView14">
+
+        <RadioButton
+            android:id="@+id/radioButton_cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="CASH" />
+
+        <RadioButton
+            android:id="@+id/radioButton_online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="ONLINE" />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="PAYMENT MODE :"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageBike"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

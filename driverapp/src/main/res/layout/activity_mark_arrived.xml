@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MarkArrived">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="406dp"
+        android:layout_height="457dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+    <Button
+        android:id="@+id/markArrived"
+        android:layout_width="167dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="16dp"
+        android:text="MARK ARRIVED"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapView" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="140dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="12dp"
+        android:gravity="center"
+        android:text="Customer Name-"
+        android:textColor="@color/purple_500"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/customerName"
+        tools:layout_editor_absoluteY="529dp" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="143dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="Customer Address-"
+        android:textColor="@color/purple_700"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/customerAdd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/customerName"
+        android:layout_width="227dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="34dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/customerAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/markArrived" />
+
+    <TextView
+        android:id="@+id/customerAdd"
+        android:layout_width="220dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="14dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/customerPhone"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="138dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:text="PHONE-"
+        android:textColor="@color/purple_500"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/customerPhone"
+        android:layout_width="215dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="46dp"
+        android:inputType="phone"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView20" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

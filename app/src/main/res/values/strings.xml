@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">T_D_E</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="accesstoken">sk.eyJ1Ijoicml0aWt5YWRhdiIsImEiOiJja3BnamFkZXMwNGRyMndsbWJocDNhNHpsIn0.TpMQMP2IAVHKk65W9jyhuw</string>
+    <string name="access_token">sk.eyJ1Ijoicml0aWt5YWRhdiIsImEiOiJja3BnamFkZXMwNGRyMndsbWJocDNhNHpsIn0.TpMQMP2IAVHKk65W9jyhuw</string>
+    <string name="directions_activity_toast_message">Route is %1$f meters long.</string>
+</resources>

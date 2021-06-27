@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/forth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Deliver_Now">
+
+    <EditText
+        android:id="@+id/Receiver_Name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="23dp"
+        android:ems="10"
+        android:hint="RECEIVER NAME"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Pickup_inst"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        android:ems="10"
+        android:hint="PICK UP INSTRUCTION"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Receiver_mobile" />
+
+    <EditText
+        android:id="@+id/Delivery_inst"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="19dp"
+        android:ems="10"
+        android:hint="DELIVERY INSTRUCTION"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Pickup_inst" />
+
+    <EditText
+        android:id="@+id/Receiver_mobile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="23dp"
+        android:ems="10"
+        android:hint="RECIEVER MOBILE NUMBER"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Receiver_Name" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="183dp"
+        android:text="PACKAGE SIZE :"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Delivery_inst" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="194dp"
+        android:text="PACKAGE WEIGHT :"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15">
+
+        <RadioButton
+            android:id="@+id/Btn_size_1"
+            android:layout_width="395dp"
+            android:layout_height="37dp"
+            android:layout_marginLeft="16dp"
+            android:text="Under 1sq Feet" />
+
+        <RadioButton
+            android:id="@+id/btn_size_2"
+            android:layout_width="398dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="16dp"
+            android:text="1sq-2sq Feet" />
+
+        <RadioButton
+            android:id="@+id/btn_size_3"
+            android:layout_width="389dp"
+            android:layout_height="31dp"
+            android:layout_marginLeft="16dp"
+            android:text="More than 2sq Feet" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_delivery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16">
+
+        <RadioButton
+            android:id="@+id/Btn_weight_1"
+            android:layout_width="395dp"
+            android:layout_height="37dp"
+
+            android:text="Under 500gm" />
+
+        <RadioButton
+            android:id="@+id/btn_weight_2"
+            android:layout_width="398dp"
+            android:layout_height="34dp"
+            android:text="500kg-2kg" />
+
+        <RadioButton
+            android:id="@+id/btn_weight_3"
+            android:layout_width="389dp"
+            android:layout_height="31dp"
+            android:text="2kg-5kg" />
+
+        <RadioButton
+            android:id="@+id/btn_weight_4"
+            android:layout_width="389dp"
+            android:layout_height="31dp"
+            android:text="More than 5kg" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_delivery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="36dp"
+        android:background="#136EE8"
+        android:text="DELIVER NOW"
+        android:textColor="#F1E9E9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

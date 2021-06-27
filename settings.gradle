@@ -1,0 +1,3 @@
+include ':driverapp'
+include ':app'
+rootProject.name = "T_D_E"
